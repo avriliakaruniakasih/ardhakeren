@@ -1,4 +1,9 @@
 ```css
+/* =========================================
+   XII.2 TECH
+   BLUE BLACK ELEGANT
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,75 +16,63 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
-    color: white;
-
+    color: #ffffff;
     background:
-        linear-gradient(
-            135deg,
-            #050b18,
-            #071b3d,
-            #18050c
-        );
-
+        radial-gradient(circle at 80% 10%, rgba(0, 102, 255, 0.15), transparent 30%),
+        linear-gradient(135deg, #02050a, #06101d 50%, #02050a);
     min-height: 100vh;
-
     overflow-x: hidden;
 }
 
 
-/* POLKADOT */
+/* =========================================
+   POLKADOT BACKGROUND
+========================================= */
 
 body::before {
     content: "";
-
     position: fixed;
-
     inset: 0;
-
     z-index: -2;
 
     background-image:
         radial-gradient(
-            rgba(255,255,255,0.13) 1px,
+            rgba(80, 150, 255, 0.12) 1px,
             transparent 1px
         );
 
-    background-size: 24px 24px;
-
+    background-size: 25px 25px;
     pointer-events: none;
 }
 
 
-/* GRADIENT GLOW */
+/* =========================================
+   BLUE GLOW
+========================================= */
 
 body::after {
     content: "";
-
     position: fixed;
 
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
 
-    top: 10%;
-    right: -150px;
+    right: -200px;
+    top: 20%;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,0,50,.25),
-            transparent 70%
-        );
+    background: #0066ff;
+    opacity: 0.08;
 
-    filter: blur(50px);
+    filter: blur(120px);
 
     z-index: -1;
-
     pointer-events: none;
 }
 
 
-/* NAVBAR */
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
     position: fixed;
@@ -92,21 +85,17 @@ body::after {
     padding: 20px 7%;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
-    z-index: 100;
+    z-index: 1000;
 
-    background:
-        rgba(3,7,17,.65);
+    background: rgba(2, 6, 12, 0.75);
 
     backdrop-filter: blur(15px);
 
     border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(70, 140, 255, 0.12);
 }
 
 .logo {
@@ -118,31 +107,32 @@ body::after {
 }
 
 .logo span {
-    color: #ff3155;
+    color: #2388ff;
 }
 
 nav {
     display: flex;
-
-    gap: 25px;
+    gap: 28px;
 }
 
 nav a {
-    color: #d8e4ff;
+    color: #9eabc0;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ff3155;
+    color: #4da3ff;
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
     min-height: 100vh;
@@ -156,46 +146,46 @@ nav a:hover {
 
     justify-content: space-between;
 
-    gap: 50px;
+    gap: 60px;
 }
 
 .hero-content {
     max-width: 600px;
 
     animation:
-        slideLeft 1s ease;
+        heroIn 1s ease;
 }
 
-@keyframes slideLeft {
+@keyframes heroIn {
 
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateY(35px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
 .tag {
-    color: #ff3155;
+    color: #4da3ff;
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: bold;
 
     letter-spacing: 4px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
     font-size:
         clamp(80px, 13vw, 170px);
 
-    line-height: .78;
+    line-height: 0.78;
 
     font-weight: 900;
 
@@ -208,24 +198,25 @@ nav a:hover {
     color: transparent;
 
     -webkit-text-stroke:
-        2px #2494ff;
+        2px #268cff;
 }
 
 .description {
     max-width: 500px;
 
-    margin:
-        30px 0;
+    margin: 30px 0;
 
-    color: #aebbd0;
+    color: #8998ad;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 
-/* BUTTON */
+/* =========================================
+   BUTTON
+========================================= */
 
 .buttons {
     display: flex;
@@ -236,10 +227,9 @@ nav a:hover {
 .button {
     display: inline-block;
 
-    padding:
-        13px 25px;
+    padding: 13px 25px;
 
-    border-radius: 30px;
+    border-radius: 6px;
 
     text-decoration: none;
 
@@ -247,42 +237,47 @@ nav a:hover {
 
     background:
         linear-gradient(
-            90deg,
-            #086fff,
-            #ff1645
+            135deg,
+            #006fff,
+            #174c91
         );
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: bold;
 
-    transition: .3s;
+    transition: 0.3s;
 
     box-shadow:
         0 10px 30px
-        rgba(20,100,255,.25);
+        rgba(0, 105, 255, 0.18);
 }
 
 .button:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-4px);
 
     box-shadow:
         0 15px 35px
-        rgba(255,30,70,.3);
+        rgba(0, 110, 255, 0.3);
 }
 
 .button.second {
     background:
-        rgba(255,255,255,.04);
+        rgba(255, 255, 255, 0.025);
 
     border:
-        1px solid
-        rgba(255,255,255,.2);
+        1px solid rgba(80, 150, 255, 0.3);
+}
+
+.button.second:hover {
+    background:
+        rgba(30, 120, 255, 0.08);
 }
 
 
-/* HERO IMAGE */
+/* =========================================
+   HERO IMAGE
+========================================= */
 
 .hero-picture {
     width: 360px;
@@ -291,7 +286,7 @@ nav a:hover {
     position: relative;
 
     animation:
-        floating 4s ease-in-out infinite;
+        floating 5s ease-in-out infinite;
 }
 
 .hero-picture img {
@@ -300,102 +295,103 @@ nav a:hover {
 
     object-fit: cover;
 
-    border-radius: 20px;
+    border-radius: 18px;
 
     position: relative;
 
     z-index: 2;
 
     border:
-        2px solid
-        rgba(255,255,255,.2);
+        1px solid rgba(90, 160, 255, 0.45);
 
     box-shadow:
-        0 25px 70px
-        rgba(0,0,0,.5);
+        0 30px 80px
+        rgba(0, 0, 0, 0.6);
 }
 
-.circle-red,
-.circle-blue {
+
+/* IMAGE FRAME */
+
+.hero-picture::before {
+    content: "";
+
     position: absolute;
+
+    inset: -12px;
+
+    border:
+        1px solid rgba(30, 130, 255, 0.25);
+
+    border-radius: 25px;
+
+    transform: rotate(4deg);
+}
+
+.hero-picture::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -50px;
+    top: -50px;
+
+    background:
+        #006fff;
+
+    opacity: 0.12;
+
+    filter: blur(50px);
 
     border-radius: 50%;
 }
 
-.circle-red {
-    width: 180px;
-    height: 180px;
-
-    background:
-        #ff1748;
-
-    right: -60px;
-    top: -50px;
-
-    filter: blur(3px);
-
-    opacity: .8;
-}
-
-.circle-blue {
-    width: 180px;
-    height: 180px;
-
-    background:
-        #087cff;
-
-    left: -70px;
-    bottom: -60px;
-
-    filter: blur(3px);
-
-    opacity: .8;
-}
-
 @keyframes floating {
 
-    0%,100% {
-        transform:
-            translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
 
     50% {
-        transform:
-            translateY(-15px);
+        transform: translateY(-12px);
     }
 }
 
 
-/* SECTION */
+/* =========================================
+   SECTION
+========================================= */
 
 .section {
     padding:
         110px 7%;
+
+    position: relative;
 }
 
 .section.dark {
     background:
-        rgba(0,0,0,.28);
+        rgba(1, 5, 10, 0.55);
 
     border-top:
-        1px solid
-        rgba(255,255,255,.05);
+        1px solid rgba(80, 140, 220, 0.08);
 
     border-bottom:
-        1px solid
-        rgba(255,255,255,.05);
+        1px solid rgba(80, 140, 220, 0.08);
 }
 
 .section-label {
-    color: #ff3155;
+    color: #3d96ff;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: bold;
 
     letter-spacing: 3px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .section h2 {
@@ -404,17 +400,19 @@ nav a:hover {
 
     line-height: 1;
 
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 
     font-weight: 900;
 }
 
 .section h2 span {
-    color: #1687ff;
+    color: #2186f5;
 }
 
 
-/* CARDS */
+/* =========================================
+   CARDS
+========================================= */
 
 .cards {
     max-width: 1000px;
@@ -432,52 +430,50 @@ nav a:hover {
 .card {
     padding: 35px;
 
-    border-radius: 18px;
+    border-radius: 12px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(20,45,85,.65),
-            rgba(30,5,15,.55)
+            rgba(12, 27, 47, 0.9),
+            rgba(4, 9, 16, 0.9)
         );
 
     border:
-        1px solid
-        rgba(255,255,255,.1);
+        1px solid rgba(70, 140, 230, 0.12);
 
-    transition: .3s;
+    transition: 0.35s;
 }
 
 .card:hover {
-    transform:
-        translateY(-8px);
+    transform: translateY(-7px);
 
     border-color:
-        #1687ff;
+        rgba(40, 140, 255, 0.5);
 
     box-shadow:
         0 20px 50px
-        rgba(0,0,0,.3);
+        rgba(0, 60, 130, 0.2);
 }
 
 .card-icon {
-    font-size: 35px;
+    font-size: 30px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .card h3 {
-    font-size: 21px;
+    font-size: 20px;
 
     margin-bottom: 10px;
 }
 
 .card p {
-    color: #aebbd0;
+    color: #8998ad;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .map-link {
@@ -485,15 +481,21 @@ nav a:hover {
 
     margin-top: 15px;
 
-    color: #ff4261;
+    color: #439cff;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 11px;
+}
+
+.map-link:hover {
+    color: #ffffff;
 }
 
 
-/* VISI */
+/* =========================================
+   VISI
+========================================= */
 
 .visi {
     max-width: 1000px;
@@ -503,25 +505,24 @@ nav a:hover {
 
     padding: 35px;
 
-    border-radius: 18px;
+    border-radius: 12px;
 
     background:
         linear-gradient(
             100deg,
-            rgba(0,115,255,.14),
-            rgba(255,0,55,.12)
+            rgba(0, 95, 210, 0.12),
+            rgba(10, 20, 35, 0.6)
         );
 
     border-left:
-        4px solid
-        #1687ff;
+        3px solid #1681ff;
 }
 
 .visi p,
 .misi > p {
-    color: #ff3155;
+    color: #439cff;
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: bold;
 
@@ -531,13 +532,19 @@ nav a:hover {
 .visi h3 {
     margin-top: 10px;
 
-    font-size: 17px;
+    color: #d9e5f5;
+
+    font-size: 16px;
 
     line-height: 1.8;
+
+    font-weight: 500;
 }
 
 
-/* MISI */
+/* =========================================
+   MISI
+========================================= */
 
 .misi {
     max-width: 1000px;
@@ -558,24 +565,36 @@ nav a:hover {
 
 .misi-list span {
     padding:
-        9px 18px;
+        8px 17px;
 
     border-radius: 30px;
 
     background:
-        rgba(255,255,255,.05);
+        rgba(30, 120, 255, 0.05);
 
     border:
-        1px solid
-        rgba(255,255,255,.12);
+        1px solid rgba(50, 140, 255, 0.16);
 
-    color: #cdd8ea;
+    color: #9eb0c7;
 
-    font-size: 11px;
+    font-size: 10px;
+
+    transition: 0.3s;
+}
+
+.misi-list span:hover {
+    color: white;
+
+    border-color: #268cff;
+
+    background:
+        rgba(30, 120, 255, 0.12);
 }
 
 
-/* KELAS */
+/* =========================================
+   CLASS CARD
+========================================= */
 
 .class-card {
     max-width: 1000px;
@@ -590,18 +609,17 @@ nav a:hover {
 
     gap: 40px;
 
-    border-radius: 20px;
+    border-radius: 16px;
 
     background:
         linear-gradient(
-            110deg,
-            #092c61,
-            #360a18
+            120deg,
+            #081d36,
+            #050b14
         );
 
     border:
-        1px solid
-        rgba(255,255,255,.12);
+        1px solid rgba(60, 140, 240, 0.18);
 }
 
 .big-number {
@@ -610,25 +628,29 @@ nav a:hover {
 
     font-weight: 900;
 
-    color: #fff;
+    color: #2186f5;
 }
 
 .class-card h3 {
-    font-size: 30px;
+    font-size: 29px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .class-card p {
-    color: #bdc9dc;
-
-    font-size: 13px;
-
     max-width: 500px;
+
+    color: #8998ad;
+
+    font-size: 12px;
+
+    line-height: 1.8;
 }
 
 
-/* STATS */
+/* =========================================
+   STATS
+========================================= */
 
 .stats {
     max-width: 1000px;
@@ -649,34 +671,42 @@ nav a:hover {
 
     text-align: center;
 
-    border-radius: 15px;
+    border-radius: 10px;
 
     background:
-        rgba(255,255,255,.04);
+        rgba(8, 17, 30, 0.8);
 
     border:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(70, 140, 230, 0.1);
+
+    transition: 0.3s;
+}
+
+.stat:hover {
+    border-color:
+        rgba(30, 130, 255, 0.4);
 }
 
 .stat strong {
     display: block;
 
-    font-size: 32px;
+    color: #3c9aff;
 
-    color: #1687ff;
+    font-size: 30px;
 }
 
 .stat small {
-    color: #9eacc0;
+    color: #6f8097;
 
-    font-size: 9px;
+    font-size: 8px;
 
     letter-spacing: 2px;
 }
 
 
-/* WALI */
+/* =========================================
+   WALI KELAS
+========================================= */
 
 .wali {
     max-width: 600px;
@@ -692,14 +722,13 @@ nav a:hover {
 
     gap: 20px;
 
-    border-radius: 15px;
+    border-radius: 12px;
 
     background:
-        rgba(255,255,255,.04);
+        rgba(7, 15, 26, 0.9);
 
     border:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(60, 140, 230, 0.13);
 }
 
 .wali-icon {
@@ -717,32 +746,34 @@ nav a:hover {
         linear-gradient(
             135deg,
             #087cff,
-            #ff1748
+            #0b3564
         );
 
-    font-size: 28px;
+    font-size: 27px;
 }
 
 .wali small {
-    color: #ff3155;
+    color: #419aff;
 
-    font-size: 9px;
+    font-size: 8px;
 
     letter-spacing: 2px;
 }
 
 .wali h3 {
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .wali p {
-    color: #9eacc0;
+    color: #728198;
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
-/* PROFILE */
+/* =========================================
+   PROFILE
+========================================= */
 
 .profile {
     max-width: 1000px;
@@ -764,15 +795,14 @@ nav a:hover {
 
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 15px;
 
     border:
-        2px solid
-        #1687ff;
+        1px solid rgba(60, 150, 255, 0.5);
 
     box-shadow:
-        15px 15px 0
-        rgba(255,30,70,.15);
+        12px 12px 0
+        rgba(20, 110, 230, 0.08);
 }
 
 .profile-photo img {
@@ -780,12 +810,18 @@ nav a:hover {
     height: 100%;
 
     object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.profile-photo:hover img {
+    transform: scale(1.04);
 }
 
 .student {
-    color: #ff3155;
+    color: #419aff;
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: bold;
 
@@ -795,11 +831,11 @@ nav a:hover {
 }
 
 .profile-text > p:not(.student) {
-    color: #acb9ce;
+    color: #8998ad;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .info {
@@ -811,8 +847,7 @@ nav a:hover {
         13px 0;
 
     border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(70, 140, 230, 0.1);
 
     display: flex;
 
@@ -820,9 +855,9 @@ nav a:hover {
 }
 
 .info span {
-    color: #1687ff;
+    color: #388ff5;
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: bold;
 
@@ -830,11 +865,15 @@ nav a:hover {
 }
 
 .info strong {
-    font-size: 13px;
+    font-size: 12px;
+
+    color: #dce7f5;
 }
 
 
-/* KEGIATAN */
+/* =========================================
+   ACTIVITIES
+========================================= */
 
 .activities {
     max-width: 1000px;
@@ -860,53 +899,57 @@ nav a:hover {
 
     justify-content: flex-end;
 
-    border-radius: 18px;
+    border-radius: 12px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(0,102,255,.15),
-            rgba(255,0,55,.12)
+            rgba(9, 30, 55, 0.8),
+            rgba(3, 8, 15, 0.9)
         );
 
     border:
-        1px solid
-        rgba(255,255,255,.1);
+        1px solid rgba(70, 140, 230, 0.12);
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .activity:hover {
-    transform:
-        translateY(-8px);
+    transform: translateY(-7px);
 
     border-color:
-        #ff3155;
+        rgba(40, 145, 255, 0.5);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 70, 150, 0.15);
 }
 
 .activity > span {
     margin-bottom: auto;
 
-    font-size: 45px;
+    font-size: 42px;
 
     font-weight: 900;
 
     color:
-        rgba(255,255,255,.12);
+        rgba(50, 145, 255, 0.12);
 }
 
 .activity h3 {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .activity p {
-    color: #9eacc0;
+    color: #77869b;
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     text-align: center;
@@ -914,39 +957,41 @@ footer {
     padding:
         60px 20px;
 
-    background: #03050a;
+    background: #02050a;
 
     border-top:
-        1px solid
-        rgba(255,255,255,.08);
+        1px solid rgba(70, 140, 230, 0.1);
 }
 
 .footer-logo {
-    font-size: 25px;
+    font-size: 24px;
 
     font-weight: 900;
 }
 
 .footer-logo span {
-    color: #ff3155;
+    color: #2589fa;
 }
 
 footer p {
-    color: #8f9caf;
+    color: #718096;
 
-    font-size: 11px;
+    font-size: 10px;
 
-    margin: 5px 0 15px;
+    margin:
+        5px 0 15px;
 }
 
 footer small {
-    color: #586477;
+    color: #4c5a6e;
 
-    font-size: 9px;
+    font-size: 8px;
 }
 
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
 
 @media (max-width: 800px) {
 
@@ -960,7 +1005,7 @@ footer small {
     }
 
     nav {
-        gap: 12px;
+        gap: 15px;
 
         flex-wrap: wrap;
 
@@ -1035,14 +1080,17 @@ footer small {
     .activities {
         grid-template-columns: 1fr;
     }
-
 }
 
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
 
 @media (max-width: 450px) {
 
     .hero h1 {
-        font-size: 70px;
+        font-size: 68px;
 
         letter-spacing: -4px;
     }
@@ -1053,7 +1101,7 @@ footer small {
     }
 
     .section h2 {
-        font-size: 42px;
+        font-size: 41px;
     }
 
     .hero-picture {
@@ -1073,5 +1121,14 @@ footer small {
         text-align: center;
     }
 
+    .visi,
+    .card,
+    .activity {
+        padding: 25px;
+    }
+
+    .wali {
+        padding: 20px;
+    }
 }
 ```
